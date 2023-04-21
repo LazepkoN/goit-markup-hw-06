@@ -386,6 +386,52 @@
                     <use href="./images/icon.svg#icon-mdl-cls"></use>
                 </svg>
             </button>
+            <p class="modal-title">Leave your contacts and we will call you back</p>
+
+            <form class="form-order" name="form-order">
+                <label class="form-order-label">
+                    <span class="form-order-label-text">Name</span>
+                    <span class="form-order-input-wrapper">
+                        <input class="form-order-input" name="order-username" type="text">
+                        <svg class="form-order-input-img">
+                            <use href="./images/icon.svg#icon-mdl-name"></use>
+                        </svg>
+                    </span>
+                </label>
+                
+                <label class="form-order-label">
+                    <span class="form-order-label-text">Phone</span>
+                    <span class="form-order-input-wrapper">
+                        <input class="form-order-input" name="order-phone" type="tel">
+                        <svg class="form-order-input-img">
+                            <use href="./images/icon.svg#icon-mdl-phone"></use>
+                        </svg>
+                    </span>
+                </label>
+
+                <label class="form-order-label">
+                    <span class="form-order-label-text">Email</span>
+                    <span class="form-order-input-wrapper">
+                        <input class="form-order-input" name="order-email" type="email">
+                        <svg class="form-order-input-img">
+                            <use href="./images/icon.svg#icon-mdl-mail"></use>
+                        </svg>
+                    </span>
+                </label>
+
+                <label class="form-order-label">
+                    <span class="form-order-label-text">Comment</span>
+                    <textarea class="form-order-textarea" name="order-comment" type="text" placeholder="Text input"></textarea>
+                </label>
+                
+                <input class="form-order-agreement-check visually-hidden" id="user_agreement" type="checkbox" name="user_agreement" value="agree"/>
+                <label for="user_agreement" class="form-order-agreement-text">
+                    I accept the terms and conditions of the &nbsp;<a href="#">Privacy Policy</a> 
+                </label>
+
+                <button class="form-order-send" type="submit">Send</button>
+
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>

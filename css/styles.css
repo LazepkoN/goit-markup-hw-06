@@ -530,7 +530,7 @@ gap: var(--grid-gap);
     left: 50%;
     transform: translate(-50%, -50%);
     width: 408px;
-    height: 584px;
+    padding: 72px 24px 24px 24px;
     background-color: #FCFCFC;
 }
 .modal-cls-btn {
@@ -545,11 +545,155 @@ gap: var(--grid-gap);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color var(--transition-dur-func), border var(--transition-dur-func);
 }
+
+.modal-cls-btn:hover {
+    background-color: var(--btn-hover-color);
+    border: 1px solid var(--btn-hover-color);
+}
+
 .modal-cls-img {
     width: 8px;
     height: 8px;
     fill: var(--dark-mode-color);
+    transition: fill var(--transition-dur-func);
+}
+
+.modal-cls-btn:hover .modal-cls-img {
+    fill: #fff;
+}
+
+.modal-title {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.form-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
+}
+.form-order-label{
+    display: flex;
+    flex-direction: column; 
+}
+.form-order-label-text {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #8E8F99;
+}
+
+.form-order-input-wrapper {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.form-order-input {
+    padding: 8px 8px 8px 38px;
+    width: 100%;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    transition: border var(--transition-dur-func);
+}
+
+.form-order-input:focus {
+    outline: none;
+    border: 1px solid var(--primary-brand-color);
+}
+
+.form-order-input-img {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    width: 18px;
+    height: 24px;
+    fill: var(--dark-mode-color);
+    transition: fill var(--transition-dur-func);
+}
+
+.form-order-input:focus + .form-order-input-img{
+    fill: var(--primary-brand-color);
+}
+.form-order-textarea {
+    padding: 8px 8px 8px 16px;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    margin-bottom: 16px;
+    transition: border var(--transition-dur-func);
+}
+
+.form-order-textarea:focus {
+    outline: none;
+    border: 1px solid var(--primary-brand-color);
+}
+
+.form-order-textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    color: rgba(46, 47, 66, 0.4);;
+}
+
+.form-order-agreement-text {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #8E8F99;
+    margin-bottom: 24px;
+}
+
+.form-order-agreement-text::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background-color var(--transition-dur-func),
+    border var(--transition-dur-func);
+}
+
+.form-order-agreement-check:checked + .form-order-agreement-text::before {
+    background-color: var(--btn-hover-color);
+    border: 1px solid var(--btn-hover-color);
+    background-image: url(../images/icon-mdl-check.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.form-order-agreement-check:focus + .form-order-agreement-text::before {
+    border: 1px solid var(--primary-brand-color);
+}
+
+.form-order-send {
+    border: none;
+    align-self: center;
+    justify-self: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--hero-text-color);
+    padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    background-color: var(--primary-brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: background-color var(--transition-dur-func);
+}
+
+.form-order-send:hover,
+.form-order-send:focus {
+    background-color: var(--btn-hover-color);
 }
 
 /* ========== Portfolio page ========== */
