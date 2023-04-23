@@ -98,7 +98,7 @@
             </div>
         </section>
         <!-- Specialization -->
-        <section class="specialization-section section">
+        <section class="specialization-section">
             <div class="container">
                 <h2 class="secondary-title">What are we doing</h2>
                 <ul class="specialization-list-container list">
@@ -270,7 +270,6 @@
                 </ul>
             </div>
         </section>
-
         <!-- Customers -->
         <section class="section">
             <div class="container">
@@ -363,10 +362,10 @@
             </div>
             <div class="footer-subscribe-wrapper">
                 <form class="footer-subscribe-form" name="footer-subscribe-form" autocomplete="on">
-                    <label>
-                        <span class="footer-sub-label">Subscribe</span>
-                        <input class="footer-sub-input" type="email" name="email-subscribe" placeholder="E-mail">
-                    </label>
+                        <div class="footer-input-wrapper">
+                            <p class="footer-sub-label">Subscribe</p>
+                            <input class="footer-sub-input" type="email" name="email-subscribe" placeholder="E-mail" aria-label="E-mail">
+                        </div>
                     
                     <button class="footer-sub-btn" type="submit">
                         <span class="footer-sub-btn-txt">Subscribe</span>
@@ -419,7 +418,7 @@
                     </span>
                 </label>
 
-                <label class="form-order-label">
+                <label class="form-order-label-comment">
                     <span class="form-order-label-text">Comment</span>
                     <textarea class="form-order-textarea" name="order-comment" placeholder="Text input"></textarea>
                 </label>

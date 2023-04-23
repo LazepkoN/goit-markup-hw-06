@@ -449,10 +449,13 @@ gap: var(--grid-gap);
     display: flex;
     align-items: flex-end;
 }
-.footer-sub-label {
-    display: flex;
 
-    cursor: pointer;
+.footer-input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-sub-label {
     margin-bottom: 16px;
 
     font-weight: 500;
@@ -469,6 +472,7 @@ gap: var(--grid-gap);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
+    width: 264px;
 }
 .footer-sub-input:focus {
     outline: none;
@@ -577,7 +581,8 @@ gap: var(--grid-gap);
 }
 .form-order-label{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    margin-bottom: 8px; 
 }
 .form-order-label-text {
     margin-bottom: 4px;
@@ -588,7 +593,6 @@ gap: var(--grid-gap);
 
 .form-order-input-wrapper {
     position: relative;
-    margin-bottom: 8px;
 }
 
 .form-order-input {
@@ -617,13 +621,19 @@ gap: var(--grid-gap);
 .form-order-input:focus + .form-order-input-img{
     fill: var(--primary-brand-color);
 }
+
+.form-order-label-comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
 .form-order-textarea {
     padding: 8px 8px 8px 16px;
     height: 120px;
     resize: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    margin-bottom: 16px;
     transition: border var(--transition-dur-func);
 }
 
@@ -689,6 +699,7 @@ gap: var(--grid-gap);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     transition: background-color var(--transition-dur-func);
+    cursor: pointer;
 }
 
 .form-order-send:hover,
